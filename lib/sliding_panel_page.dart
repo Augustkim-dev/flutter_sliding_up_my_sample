@@ -19,8 +19,9 @@ class _SlidingPanelPageState extends State<SlidingPanelPage> {
           appBar: AppBar(
             title: Text('Slding Up Panel'),
           ),
+          // 전체 배경
           body: Container(
-            color: Colors.blue,
+            child: Image.network('https://picsum.photos/250?image=9'),
           ),
         ),
         SlidingUpPanelWidget(
