@@ -24,15 +24,18 @@ class _SlidingPanelPageState extends State<SlidingPanelPage> {
           ),
         ),
         SlidingUpPanelWidget(
+            // ignore: sort_child_properties_last
             child: Container(
               color: Colors.amber,
               child: Column(
                 children: [
+                  // 최상단 가로줄 바
                   Container(
                     alignment: Alignment.center,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        // 회색으로 정중앙에 맞춰서 만들어서 넣기
                         Container(
                           width: 30,
                           height: 5,
@@ -47,8 +50,16 @@ class _SlidingPanelPageState extends State<SlidingPanelPage> {
                   Divider(
                     color: Colors.grey,
                   ),
+                  // 리스트뷰를 빌드로 넣어줄 곳
                   Container(
-                    color: Colors.amber,
+                    child: Flexible(
+                      child: ListView.builder(
+                        itemBuilder: (context, index) {
+                          return Text('$index');
+                        },
+                        itemCount: 20,
+                      ),
+                    ),
                   ),
                 ],
               ),
