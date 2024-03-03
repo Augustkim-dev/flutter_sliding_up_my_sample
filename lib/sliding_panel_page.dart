@@ -26,6 +26,32 @@ class _SlidingPanelPageState extends State<SlidingPanelPage> {
         SlidingUpPanelWidget(
             child: Container(
               color: Colors.amber,
+              child: Column(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          width: 30,
+                          height: 5,
+                          decoration: BoxDecoration(
+                              color: Colors.grey[700],
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(12.0))),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Divider(
+                    color: Colors.grey,
+                  ),
+                  Container(
+                    color: Colors.amber,
+                  ),
+                ],
+              ),
             ),
             controlHeight: 50.0,
             panelController: slidingUpController),
