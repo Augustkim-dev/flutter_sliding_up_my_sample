@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sliding_up_my_sample/sliding_panel_ori.dart';
 import 'package:flutter_sliding_up_my_sample/sliding_panel_page.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,12 +12,20 @@ class HomeScreen extends StatelessWidget {
         title: Text('Home'),
       ),
       body: Container(
-        child: ElevatedButton(
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => SlidingPanelPage()));
-            },
-            child: Text('Sliding Panel')),
+        child: Column(
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => SlidingPanelOri()));
+                },
+                child: Text('Sliding Panel')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => SlidingPanelPage()));
+                },
+                child: Text('Flutter Sliding Panel')),
+          ],
+        ),
       ),
     );
   }
